@@ -5,7 +5,7 @@ const Sidebar = () => {
   return (
     <div className="h-screen w-72 bg-white">
       <div className="space-y-4 px-8 py-6">
-        <h1 className="font-semibold text-[#00ADB5]">Task Manager</h1>
+        <h1 className="text-lg font-semibold text-[#00ADB5]">Task Master</h1>
         <p>
           Um simples{' '}
           <span className="text-[#00ADB5]">organizador de tarefas</span>

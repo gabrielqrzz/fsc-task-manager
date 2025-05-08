@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 
 import {
@@ -15,8 +15,22 @@ import TaskItem from './TaskItem'
 import TasksSeparator from './TasksSeparator'
 
 const Tasks = () => {
-  const [tasks, setTasks] = useState(TASKS)
+  const [tasks, setTasks] = useState([])
   const [addTaskDialogIsOpen, setAddTaskDialogIsOpen] = useState(false)
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      //pegar os dados da API
+      const response = await fetch('http://localhost:3000/tasks', {
+        method: 'GET',
+      })
+
+      const tasks = await response.json()
+      //apos pegar os dados da API, atualizo o state "tasks"
+      setTasks(tasks)
+    }
+    fetchTasks()
+  }, [])
 
   const morningTasks = tasks.filter((tasks) => tasks.time === 'morning')
   const afternoonTasks = tasks.filter((tasks) => tasks.time === 'afternoon')

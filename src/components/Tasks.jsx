@@ -39,17 +39,7 @@ const Tasks = () => {
     setAddTaskDialogIsOpen(false)
   }
 
-  const handleTaskDeleteClick = async (taskId) => {
-    //chamar a API para deletar a tarefa
-    const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
-      method: 'DELETE',
-    })
-    if (!response.ok) {
-      return toast.error(
-        'Erro ao deletar a tarefa. Por favor, tente novamente.'
-      )
-    }
-    //apos chamar a API atualiza o state
+  const onDeleteTaskSuccess = async (taskId) => {
     const newTasks = tasks.filter((task) => task.id != taskId)
     setTasks(newTasks)
     toast.success('Tarefa deletada com sucesso!')
@@ -130,7 +120,7 @@ const Tasks = () => {
               key={task.id}
               task={task}
               handleCheckboxClick={handleTaskCheckboxClick}
-              handleDeleteClick={handleTaskDeleteClick}
+              onDeleteSuccess={onDeleteTaskSuccess}
             />
           ))}
         </div>
@@ -144,7 +134,7 @@ const Tasks = () => {
               key={task.id}
               task={task}
               handleCheckboxClick={handleTaskCheckboxClick}
-              handleDeleteClick={handleTaskDeleteClick}
+              onDeleteSuccess={onDeleteTaskSuccess}
             />
           ))}
         </div>
@@ -155,7 +145,7 @@ const Tasks = () => {
               key={task.id}
               task={task}
               handleCheckboxClick={handleTaskCheckboxClick}
-              handleDeleteClick={handleTaskDeleteClick}
+              onDeleteSuccess={onDeleteTaskSuccess}
             />
           ))}
         </div>

@@ -1,8 +1,9 @@
 import './index.css'
 
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Toaster } from 'sonner'
 
 import App from './App.jsx'
 import TaskDetailsPage from './pages/task-details.jsx'
@@ -18,8 +19,15 @@ const router = createBrowserRouter([
   },
 ])
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Toaster
+      toastOptions={{
+        style: {
+          color: '#35383E',
+        },
+      }}
+    />
     <RouterProvider router={router} />
-  </StrictMode>
+  </React.StrictMode>
 )

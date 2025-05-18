@@ -2,8 +2,8 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Estudar FSC",
-      "description": "Estudar para a prova",
+      "title": "Terminar esse trabalho",
+      "description": "Terminar isso aqui",
       "time": "morning",
       "status": "done"
     },

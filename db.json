@@ -1,45 +1,10 @@
 {
   "tasks": [
     {
-      "id": "2",
+      "id": "6cb06985-9588-4585-9bfa-2fb8899dc29c",
       "title": "Ler",
-      "description": "Ler David Goggins",
       "time": "morning",
-      "status": "done"
-    },
-    {
-      "id": "3",
-      "title": "Treinar",
-      "description": "Ganhar musculo",
-      "time": "afternoon",
-      "status": "in_progress"
-    },
-    {
-      "id": "4",
-      "title": "Fazer comprar",
-      "description": "Mercado",
-      "time": "afternoon",
-      "status": "in_progress"
-    },
-    {
-      "id": "5",
-      "title": "Descansar",
-      "description": "Dormir",
-      "time": "evening",
-      "status": "not_started"
-    },
-    {
-      "id": "6",
-      "title": "Meditar",
-      "description": "Meditar por 10min",
-      "time": "evening",
-      "status": "not_started"
-    },
-    {
-      "id": "0b6a0898-1e09-4f26-9a55-299ce8b610a6",
-      "title": "Terminar esse trabalho",
-      "time": "morning",
-      "description": "!",
+      "description": "aaa",
       "status": "not_started"
     }
   ]

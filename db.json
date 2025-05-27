@@ -1,13 +1,6 @@
 {
   "tasks": [
     {
-      "id": "00b68951-d7d8-4a61-aa8f-26e1d9d41780",
-      "title": "Teste teste",
-      "time": "afternoon",
-      "description": "testando",
-      "status": "not_started"
-    },
-    {
       "id": "84b3d47a-637a-43ed-a542-22d381ab1e3e",
       "title": "abc",
       "time": "evening",

@@ -3,7 +3,7 @@ import SidebarButton from './SidebarButton'
 
 const Sidebar = () => {
   return (
-    <div className="h-screen w-72 min-w-72 bg-white">
+    <div className="h-screen min-w-72 bg-white">
       <div className="space-y-4 px-8 py-6">
         <h1 className="text-lg font-semibold text-brand-primary">
           Task Master

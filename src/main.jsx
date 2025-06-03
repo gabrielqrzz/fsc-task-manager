@@ -3,10 +3,13 @@ import './index.css'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate,RouterProvider } from 'react-router-dom'
 import { Toaster } from 'sonner'
 
+import AuthRedirect from './components/AuthRedirect.jsx'
+import Cadastro from './pages/Cadastro.jsx'
 import HomePage from './pages/Home.jsx'
+import Login from './pages/Login.jsx'
 import TaskDetailsPage from './pages/TaskDetails.jsx'
 import TasksPage from './pages/Tasks.jsx'
 
@@ -15,15 +18,33 @@ const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
+    element: <Navigate to="/login" />,
   },
   {
-    path: '/tasks',
-    element: <TasksPage />,
+    path: '/login',
+    element: <Login />,
   },
   {
-    path: '/task/:taskId',
-    element: <TaskDetailsPage />,
+    path: '/cadastro',
+    element: <Cadastro />,
+  },
+  {
+    path: '/',
+    element: <AuthRedirect />,
+    children: [
+      {
+        path: '/home',
+        element: <HomePage />,
+      },
+      {
+        path: '/tasks',
+        element: <TasksPage />,
+      },
+      {
+        path: '/task/:taskId',
+        element: <TaskDetailsPage />,
+      },
+    ],
   },
 ])
 

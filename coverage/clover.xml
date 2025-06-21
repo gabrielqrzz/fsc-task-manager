@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1750517856711" clover="3.2.0">
+  <project timestamp="1750517856711" name="All files">
+    <metrics statements="9" coveredstatements="9" conditionals="11" coveredconditionals="11" methods="6" coveredmethods="6" elements="26" coveredelements="26" complexity="0" loc="9" ncloc="9" packages="1" files="1" classes="1"/>
+    <file name="validators.js" path="C:\Users\Gabriel\Desktop\fsc-task-manager\src\utils\validators.js">
+      <metrics statements="9" coveredstatements="9" conditionals="11" coveredconditionals="11" methods="6" coveredmethods="6"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="10" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="3" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="23" count="3" type="stmt"/>
+      <line num="24" count="3" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

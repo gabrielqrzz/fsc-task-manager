@@ -37,10 +37,12 @@ const AddTaskDialog = ({ isOpen, handleClose }) => {
     const task = {
       id: v4(),
       title: data.title.trim(),
+
       time: data.time.trim(),
       description: data.description.trim(),
       status: 'not_started',
     }
+
     addTask(task, {
       onSuccess: () => {
         toast.success('Tarefa adicionada com sucesso.')
